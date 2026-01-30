@@ -61,8 +61,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.write(" ")
-#st.markdown(""" <style> img.custom-img { height: 50px ; object-fit: cover; border-radius: 10px; } </style> """, unsafe_allow_html=True)
-# Image d'accueil
+
 st.image( "046-Creche-Babilou-Nice-Grenouilleres-10.jpg", use_container_width=True )
 
 # Titre et descrition de l'outils
@@ -78,7 +77,7 @@ st.markdown("---")
 
 # ------------------ Choix du type d'entreprise ------------------
 st.markdown("### Choisissez la taille de l'entreprise")
-type_entreprise = st.selectbox("Sélectionnez la taille de l'entreprise :",["moins de 1000", "plus de 1000"])
+type_entreprise = st.selectbox("Sélectionnez la taille de l'entreprise :",["Moins de 1 000 salariés", "Plus de 1 000 salariés"])
 
 # ------------------ Chargement du modèle de régression quantile ------------------
 model = joblib.load("preco_modele3.pkl")
@@ -92,7 +91,7 @@ if type_entreprise:
 
     with col1:
         Nb_Sal = st.number_input("Nombre de salariés", min_value=1, value=250)
-        Taux_F = st.number_input("Taux de féminisation", min_value=1.0, max_value=100.0, value=50.0)
+        Taux_F = st.number_input("Taux de féminisation", min_value=1., max_value=100., value=50.)
         Age_moyen = st.number_input("Moyenne d'âge", min_value=1.0, max_value=100.0, value=41.0)
         #Prct_Cadre = st.number_input("Pourcentage de Cadre", min_value=0.0, max_value=100.0, value=2.0)
 
@@ -123,7 +122,7 @@ if type_entreprise:
 
         avg_cap = round(np.expm1(pred["mean"].iloc[0]))
         min_cap = round(avg_cap-avg_cap*0.10)
-        max_cap = round(avg_cap+avg_cap*0.20)
+        max_cap = round(avg_cap+avg_cap*0.15)
         
 
 
