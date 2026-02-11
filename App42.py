@@ -62,7 +62,7 @@ st.markdown("""
 
 st.write(" ")
 
-st.image( "046-Creche-Babilou-Nice-Grenouilleres-10.jpg", use_container_width=True )
+st.image( "babilou-evry-agnescolombo-119.jpg", use_container_width=True )
 
 # Titre et descrition de l'outils
 st.markdown("""
@@ -155,3 +155,4 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
