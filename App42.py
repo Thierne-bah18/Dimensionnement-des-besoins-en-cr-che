@@ -66,18 +66,18 @@ st.image( "babilou-evry-agnescolombo-119.jpg", use_container_width=True )
 
 # Titre et descrition de l'outils
 st.markdown("""
-<h1 style='text-align:center;'> Outil de dimensionnement des besoins en crèche</h1>
+<h1 style='text-align:center;'> Combien de places en crèche pour vos collaborateurs ? Faites l’estimation en 1 minute </h1>
 <p style='text-align:center; color:gray; font-size:17px;'>
-Obtenez une estimation du nombre de places à réserver en crèche selon le profil de votre entreprise.
-Un outil simple et intuitif pour orienter vos choix.
+Obtenez en quelques clics une estimation personnalisée du nombre de places en crèche nécessaires pour accompagner vos collaborateurs.
+Un outil rapide et fiable pour éclairer votre stratégie RH.
 </p>
 """, unsafe_allow_html=True)
 
 st.markdown("---")
 
 # ------------------ Choix du type d'entreprise ------------------
-st.markdown("### Choisissez la taille de l'entreprise")
-type_entreprise = st.selectbox("Sélectionnez la taille de l'entreprise :",["Moins de 1 000 salariés", "Plus de 1 000 salariés"])
+st.markdown("### Parlez-nous de votre entreprise")
+type_entreprise = st.selectbox("Quelle est la taille de votre entreprise ? :",["Moins de 1 000 salariés", "Plus de 1 000 salariés"])
 
 # ------------------ Chargement du modèle de régression quantile ------------------
 model = joblib.load("preco_modele3.pkl")
@@ -85,8 +85,8 @@ model = joblib.load("preco_modele3.pkl")
 # ------------------ Champs à saisir ------------------
 if type_entreprise:
     st.markdown("---")
-    st.markdown("#### Entrez les caractéristiques de votre entreprise")
-    st.markdown("Si vous ne connaissez pas les caractéristiques, veuillez entrer uniquement le nombre de salariés et laissez les autres valeurs par défaut.")
+    st.markdown("#### Quelques informations pour une estimation sur mesure")
+    st.markdown(" Vous ne disposez pas de toutes les données ? Renseignez simplement le nombre de collaborateurs — nous nous occupons du reste.")
     col1, col2 = st.columns(2)
 
     with col1:
@@ -103,7 +103,7 @@ if type_entreprise:
     
 
     st.markdown("<br>", unsafe_allow_html=True)
-    predict_btn = st.button("Estimer le besoin en places", use_container_width=True)
+    predict_btn = st.button(" Obtenir mon estimation personnalisée", use_container_width=True)
 
     # ------------------ Prédiction du besoin ------------------
     if predict_btn:
@@ -155,4 +155,5 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
