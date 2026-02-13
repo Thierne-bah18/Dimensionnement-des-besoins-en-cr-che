@@ -49,7 +49,7 @@ div.stButton > button:hover {
 .top-banner {
     background-color: #02378E;
     color: white;
-    padding: 12px;
+    padding: 6px;
     text-align: center;
     border-radius: 0 0 15px 15px;
 }
@@ -66,7 +66,7 @@ st.markdown(f"""
 <style>
 .top-banner {{
     background-color: #02378E;
-    padding: 4px 0;;
+    padding: 10px 0;;
     border-radius: 10px;
     text-align: center;
 }}
@@ -89,7 +89,7 @@ st.image( "babilou-evry-agnescolombo-119.jpg", use_container_width=True )
 
 # Titre et descrition de l'outils
 st.markdown("""
-<h1 style='text-align:center;'> Combien de places en crèche pour vos collaborateurs ? Faites l’estimation en 1 minute </h1>
+<h1 style='text-align:center;color:#02378E;'> Combien de places en crèche pour vos collaborateurs ? Faites l’estimation en 1 minute </h1>
 <p style='text-align:center; color:gray; font-size:17px;'>
 Obtenez en quelques clics une estimation personnalisée du nombre de places en crèche nécessaires pour accompagner vos collaborateurs.
 Un outil rapide et fiable pour éclairer votre stratégie RH.
@@ -178,6 +178,7 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
