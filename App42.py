@@ -13,10 +13,11 @@ st.set_page_config(
     layout="centered"
 )
 
-
 def get_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
+
+logo_base64 = get_base64("logo_babilou_transparent.png")
 
 #Style de la page 
 st.markdown("""
@@ -177,6 +178,7 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
