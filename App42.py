@@ -108,7 +108,7 @@ model = joblib.load("preco_modele3.pkl")
 # ------------------ Champs à saisir ------------------
 if type_entreprise:
     st.markdown("---")
-    st.markdown("#### Quelques informations pour une estimation sur mesure")
+    st.markdown("### Quelques informations pour une estimation sur mesure")
     st.markdown(" Vous ne disposez pas de toutes les données ? Renseignez simplement le nombre de collaborateurs — nous nous occupons du reste.")
     col1, col2 = st.columns(2)
 
@@ -178,6 +178,7 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
