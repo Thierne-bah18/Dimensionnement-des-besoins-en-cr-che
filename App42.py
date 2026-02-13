@@ -27,10 +27,10 @@ body {
     font-family: "Helvetica", sans-serif;
 }
 h1, h2, h3 {
-    color: #003366;
+    color: #02378E;
 }
 div.stButton > button {
-    background-color: #003366;
+    background-color: #02378E;
     color: white;
     border-radius: 12px;
     height: 3em;
@@ -47,7 +47,7 @@ div.stButton > button:hover {
     text-align: center;
 }
 .top-banner {
-    background-color: #003366;
+    background-color: #02378E;
     color: white;
     padding: 12px;
     text-align: center;
@@ -178,6 +178,7 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
