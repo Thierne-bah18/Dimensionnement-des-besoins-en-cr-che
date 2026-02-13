@@ -4,6 +4,7 @@ import joblib
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 import pandas as pd
+import base64
 
 # Configuration de la page
 st.set_page_config(
@@ -11,6 +12,11 @@ st.set_page_config(
     page_icon="",
     layout="centered"
 )
+
+
+def get_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
 
 #Style de la page 
 st.markdown("""
@@ -55,10 +61,26 @@ div.stButton > button:hover {
 </style>
 """, unsafe_allow_html=True)
 # Bande blue et et logo
-st.markdown("""
-        <div style="background-color:#02378E;padding:10px;border-radius:10px;text-align:center;">
-        </div>
-    """, unsafe_allow_html=True)
+st.markdown(f"""
+<style>
+.top-banner {{
+    background-color: #02378E;
+    padding: 4px 0;;
+    border-radius: 10px;
+    text-align: center;
+}}
+
+.top-banner img {{
+    height: 35px;
+    display: block;
+    margin: auto;
+}}
+</style>
+
+<div class="top-banner">
+    <img src="data:image/png;base64,{logo_base64}">
+</div>
+""", unsafe_allow_html=True)
 
 st.write(" ")
 
@@ -155,5 +177,6 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
 
