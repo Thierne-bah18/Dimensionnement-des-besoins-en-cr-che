@@ -131,7 +131,7 @@ if type_entreprise:
     # ------------------ Prédiction du besoin ------------------
     if predict_btn:
 
-        seg_val = 1 if type_entreprise == "plus de 1000" else 0
+        seg_val = 1 if type_entreprise == "Plus de 1 000 salariés" else 0
 
         X_df = pd.DataFrame({
             "Nb_Sal": [Nb_Sal],
@@ -178,6 +178,7 @@ st.markdown("""
 Réalisé par Thierno | Outil de dimensionnement © 2025
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
